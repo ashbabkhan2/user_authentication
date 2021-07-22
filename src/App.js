@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React ,{useState} from 'react';
+import Home from './component/Home/Home';
+import Header from './component/header/Header';
+import Login from './component/login/Login';
+const App = () =>{
+  const [isloggedin,setisloggedin]=useState(false);
+  const [email,setemail]=useState('');
+  const [password,setpassword] =useState('');
+  const loggedin = (email,password) =>{
+    setemail(email);
+    setpassword(password);
+    setisloggedin(true);
+    console.log(email,password)
+  }
+  const loggedout = () =>{
+    setisloggedin(false);
+  }
+   return(
+     <React.Fragment>
+       {isloggedin && <Home email={email} pass={password} logout={loggedout}/>}
+       {!isloggedin && <Login login={loggedin}/>}   
+     </React.Fragment>
+   );
 }
-
 export default App;

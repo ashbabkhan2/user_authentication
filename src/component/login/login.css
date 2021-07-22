@@ -1,0 +1,93 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+.Login{
+    width: 70%;
+    box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.6);
+    margin: 0 auto;
+    padding: 30px 20px;
+    margin-top: 12px;
+}
+.Login input{
+    padding: 5px 10px;
+    flex: 0.8;
+    border-radius: 3px;
+    border: 1px solid rgba(0,0,0,0.6);
+}
+.Login input:focus{
+    border:1px solid purple;
+    outline:none;
+}
+.emails{
+    display: flex;
+    justify-content:space-around;
+}
+.emails label{
+    font-size: 20px;
+    font-weight:bold
+}
+.emails.first input{
+    /* margin-bottom: 10px; */
+    margin-left: 31px;
+}
+.emails.first{
+    margin-bottom: 10px;
+}
+.buttons{
+    text-align: center;
+    margin-top: 18px;
+}
+.buttons button{
+    padding: 8px 20px;
+    background:transparent;
+    border: 1px solid purple;
+    cursor:pointer;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius:16px;
+}
+.p{
+    margin-top: -10px;
+}
+p{
+    text-align: center;
+    color: rgba(0,0,0,0.6);
+    font-size: 11px;
+}
+.buttons button:hover{
+    background-color: purple;
+    color: white;
+    border:1px solid #fff;
+}
+.abc input{
+   border: 1px solid red;  
+}
+.abc label{
+    color: red;
+}
+.abc input:focus{
+    border: 1px solid red;
+}
+.aaa{
+    width: 100%;
+}
+
+@media all and (max-width:700px){
+ .emails{
+     display: block;
+ }   
+ .emails input{
+     display: block;
+     width: 100%;
+     margin-top: 4px;
+ }
+ .emails.first input{
+    margin-left: 0px;
+ }
+ .Login{
+     width: 86%;
+ }
+}
